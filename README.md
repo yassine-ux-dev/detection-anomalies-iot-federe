@@ -14,6 +14,9 @@ reconstruction ; l'entraînement fédéré utilise FedProx et un affinage local.
 supervisé** (perceptron multicouche, via Flower) sert de référence. Les décisions sont expliquées
 par **SHAP**. L'évaluation porte sur trois jeux publics : **TON-IoT, N-BaIoT, BoT-IoT**.
 
+> 📖 **Explication détaillée du code, partie par partie :** [`docs/EXPLICATION_DU_CODE.md`](docs/EXPLICATION_DU_CODE.md).
+> Chaque dossier contient aussi son propre `README.md`.
+
 ## Structure
 
 ```
