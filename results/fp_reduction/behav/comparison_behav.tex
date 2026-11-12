@@ -1,0 +1,17 @@
+% fp_reduction/build_behav_table.py — \usepackage{booktabs,graphicx}
+\begin{table}[htbp]\centering
+\caption{BoT-IoT -- modèles sans \texttt{hour\_of\_day} comparés au modèle actuel, sur le jeu de test propre (utilisé une seule fois). Seuils choisis sur la validation (FPR $\leq$ 5\,\%). « deploy » n'utilise que des variables qu'un extracteur standard reproduit.}
+\label{tab:botiot-sans-heure}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrrrr}
+\toprule
+ & & & & & & & & & \multicolumn{5}{c}{Rappel par type (\%)} \\
+\cmidrule(lr){10-14}
+Variante & Feat. & Seuil & F1-m. & AUC & MCC & Bal.\ acc. & Rappel (\%) & FPR (\%) & DDoS & DoS & Scan & Vol & Keyl. \\
+\midrule
+Origine (0,167) & 51 & 0.167 & 0.711 & 0.9962 & 0.511 & 0.966 & 97.7 & 4.5 & 100.0 & 94.6 & 99.2 & 36.4 & 94.7 \\
+Sans heure + oct./paq. & 51 & 0.601 & 0.621 & 0.9960 & 0.375 & 0.952 & 95.1 & 4.6 & 93.4 & 94.6 & 99.3 & 100.0 & 98.0 \\
+\textbf{100 \\% déployable} & 32 & 0.699 & 0.704 & 0.9891 & 0.502 & 0.969 & 97.5 & 3.7 & 98.7 & 97.5 & 95.2 & 36.4 & 92.8 \\
+\bottomrule
+\end{tabular}}
+\end{table}

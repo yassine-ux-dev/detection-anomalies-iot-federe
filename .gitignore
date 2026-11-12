@@ -1,0 +1,25 @@
+# Jeux de données (téléchargés séparément — voir data/README.md)
+/data/*
+!/data/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Journaux, sauvegardes et fichiers temporaires
+*.log
+*.tmp
+*.bak
+*.bak_*
+*.orig
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

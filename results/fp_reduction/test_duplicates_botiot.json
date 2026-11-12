@@ -1,0 +1,10 @@
+{
+  "test_contenu_identique_train": 0.20204717400979083,
+  "normaux_identiques": 0.1099476439790576,
+  "attaques_identiques": 0.2029253194888179,
+  "fpr_normaux_uniques": 0.04941176470588235,
+  "n_normaux_uniques": 850,
+  "rappel_attaques_uniques": 0.9871484937683973,
+  "n_attaques_uniques": 79835,
+  "rappel_attaques_dupliquees": 0.9355965559655597
+}

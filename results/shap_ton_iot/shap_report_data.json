@@ -1,0 +1,144 @@
+{
+  "dataset": "ton_iot",
+  "checkpoint": "final_model.pt",
+  "examples": {
+    "attack": {
+      "label": "attack",
+      "true_class": 1,
+      "base_value": 0.41721197962760925,
+      "f_x": 0.7087116014161672,
+      "predicted_class": "attack",
+      "top_contributions": [
+        {
+          "feature": "hour_of_day",
+          "value": 0.0,
+          "shap_value": 0.26339991860119394,
+          "direction": "attack"
+        },
+        {
+          "feature": "pressure",
+          "value": 0.4368317127227783,
+          "shap_value": -0.06518795517032804,
+          "direction": "normal"
+        },
+        {
+          "feature": "humidity",
+          "value": 0.17667724192142487,
+          "shap_value": 0.03759223500819589,
+          "direction": "attack"
+        },
+        {
+          "feature": "src_weather",
+          "value": 1.0,
+          "shap_value": 0.03582417524366065,
+          "direction": "attack"
+        },
+        {
+          "feature": "temperature",
+          "value": 0.6603975296020508,
+          "shap_value": 0.009984053909288287,
+          "direction": "attack"
+        },
+        {
+          "feature": "src_thermostat",
+          "value": 0.0,
+          "shap_value": 0.009823148418217898,
+          "direction": "attack"
+        },
+        {
+          "feature": "src_modbus",
+          "value": 0.0,
+          "shap_value": -0.009523892042489024,
+          "direction": "normal"
+        },
+        {
+          "feature": "src_gps_tracker",
+          "value": 0.0,
+          "shap_value": -0.008525582043803296,
+          "direction": "normal"
+        },
+        {
+          "feature": "latitude",
+          "value": 0.051841456443071365,
+          "shap_value": 0.0064870261292831665,
+          "direction": "attack"
+        },
+        {
+          "feature": "longitude",
+          "value": 0.05205027759075165,
+          "shap_value": 0.004731878240463054,
+          "direction": "attack"
+        }
+      ]
+    },
+    "normal": {
+      "label": "normal",
+      "true_class": 0,
+      "base_value": 0.41721197962760925,
+      "f_x": 0.16561196930728156,
+      "predicted_class": "normal",
+      "top_contributions": [
+        {
+          "feature": "hour_of_day",
+          "value": 0.52173912525177,
+          "shap_value": -0.13236451947897154,
+          "direction": "normal"
+        },
+        {
+          "feature": "temperature",
+          "value": 0.9601039886474609,
+          "shap_value": -0.09987314394055812,
+          "direction": "normal"
+        },
+        {
+          "feature": "src_gps_tracker",
+          "value": 0.0,
+          "shap_value": -0.026014427207410335,
+          "direction": "normal"
+        },
+        {
+          "feature": "humidity",
+          "value": 0.36090144515037537,
+          "shap_value": 0.011255951886494385,
+          "direction": "attack"
+        },
+        {
+          "feature": "src_modbus",
+          "value": 0.0,
+          "shap_value": -0.006640921722864732,
+          "direction": "normal"
+        },
+        {
+          "feature": "src_garage_door",
+          "value": 0.0,
+          "shap_value": 0.006537259352335241,
+          "direction": "attack"
+        },
+        {
+          "feature": "src_thermostat",
+          "value": 0.0,
+          "shap_value": -0.00494725757278502,
+          "direction": "normal"
+        },
+        {
+          "feature": "src_fridge",
+          "value": 0.0,
+          "shap_value": -0.004747329483507201,
+          "direction": "normal"
+        },
+        {
+          "feature": "light_status",
+          "value": 0.0,
+          "shap_value": -0.004269908741116523,
+          "direction": "normal"
+        },
+        {
+          "feature": "latitude",
+          "value": 0.051841456443071365,
+          "shap_value": 0.0028994101934281006,
+          "direction": "attack"
+        }
+      ]
+    }
+  }
+}

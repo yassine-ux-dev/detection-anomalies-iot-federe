@@ -1,0 +1,46 @@
+{
+  "dataset": "TON-IoT (IoT device telemetry sub-dataset)",
+  "checkpoint": "final_model.pt",
+  "evaluated_at": "2026-07-07T14:14:50.528967+00:00",
+  "num_test_examples": 721227,
+  "decision_threshold": 0.6699999999999999,
+  "loss": 0.5370899097663141,
+  "f1_macro": 0.6487440811060929,
+  "auc": 0.8131289867334714,
+  "accuracy": 0.7791735473020284,
+  "false_positive_rate": 0.1889714040444124,
+  "false_negative_rate": 0.41023961784420987,
+  "confusion_matrix": {
+    "tn": 500725,
+    "fp": 116670,
+    "fn": 42596,
+    "tp": 61236
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.921600674371136,
+      "recall": 0.8110285959555876,
+      "f1-score": 0.8627864180385211,
+      "support": 617395.0
+    },
+    "1": {
+      "precision": 0.34420424268995986,
+      "recall": 0.5897603821557901,
+      "f1-score": 0.4347017441736649,
+      "support": 103832.0
+    },
+    "accuracy": 0.7791735473020284,
+    "macro avg": {
+      "precision": 0.6329024585305479,
+      "recall": 0.7003944890556888,
+      "f1-score": 0.6487440811060929,
+      "support": 721227.0
+    },
+    "weighted avg": {
+      "precision": 0.8384753528089651,
+      "recall": 0.7791735473020284,
+      "f1-score": 0.8011568785776637,
+      "support": 721227.0
+    }
+  }
+}

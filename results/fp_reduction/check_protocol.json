@@ -1,0 +1,34 @@
+{
+  "reconstruction_client0_identique": true,
+  "baseline_reproduit": {
+    "f1_macro": 0.9099085213718239,
+    "auc": 0.9961902515095545,
+    "fp": 379,
+    "normaux": 1909
+  },
+  "test_origine_vu_en_train": 0.7981881836343138,
+  "test_origine_normaux_vus_en_train": 0.7941330539549503,
+  "validation_fp_seuil_0.09": 196,
+  "fp_avec_jumeau_attaque_en_train": 0,
+  "fp_avec_jumeau_normal_en_train": 39,
+  "fp_profil_udp_int_<=4pkts": 140,
+  "fp_scores_les_plus_frequents": {
+    "0.116": 113,
+    "0.124": 17,
+    "0.136": 3,
+    "0.118": 3,
+    "0.985": 2
+  },
+  "fp_pkts_bytes_les_plus_frequents": {
+    "2 pkts / 176 o": 89,
+    "2 pkts / 172 o": 32,
+    "430 pkts / 25800 o": 3,
+    "1 pkts / 88 o": 3,
+    "645 pkts / 38700 o": 2
+  },
+  "train_profil_udp_int_2pkts": {
+    "normal": 2345,
+    "attaque/UDP": 30303,
+    "attaque/OS_Fingerprint": 7
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "hypothese_A": [
+    {
+      "appareil": "Danmini_Doorbell",
+      "dist_moy_normal_propre": 10.126749038696289,
+      "dist_moy_normal_autre_plus_proche": 10.02033519744873,
+      "pct_attaques_plus_proches_dun_autre": 1.0
+    },
+    {
+      "appareil": "Ecobee_Thermostat",
+      "dist_moy_normal_propre": 10.39999771118164,
+      "dist_moy_normal_autre_plus_proche": 10.241716384887695,
+      "pct_attaques_plus_proches_dun_autre": 1.0
+    },
+    {
+      "appareil": "Ennio_Doorbell",
+      "dist_moy_normal_propre": 8.177992820739746,
+      "dist_moy_normal_autre_plus_proche": 8.095178604125977,
+      "pct_attaques_plus_proches_dun_autre": 0.60025
+    },
+    {
+      "appareil": "Philips_B120N10_Baby_Monitor",
+      "dist_moy_normal_propre": 10.14734935760498,
+      "dist_moy_normal_autre_plus_proche": 10.137210845947266,
+      "pct_attaques_plus_proches_dun_autre": 0.85875
+    },
+    {
+      "appareil": "Provision_PT_737E_Security_Camera",
+      "dist_moy_normal_propre": 9.45482063293457,
+      "dist_moy_normal_autre_plus_proche": 9.383331298828125,
+      "pct_attaques_plus_proches_dun_autre": 1.0
+    },
+    {
+      "appareil": "Provision_PT_838_Security_Camera",
+      "dist_moy_normal_propre": 9.512494087219238,
+      "dist_moy_normal_autre_plus_proche": 9.504698753356934,
+      "pct_attaques_plus_proches_dun_autre": 0.442
+    },
+    {
+      "appareil": "Samsung_SNH_1011_N_Webcam",
+      "dist_moy_normal_propre": 8.276572227478027,
+      "dist_moy_normal_autre_plus_proche": 8.116677284240723,
+      "pct_attaques_plus_proches_dun_autre": 0.999
+    },
+    {
+      "appareil": "SimpleHome_XCS7_1002_WHT_Security_Camera",
+      "dist_moy_normal_propre": 10.3486967086792,
+      "dist_moy_normal_autre_plus_proche": 10.269265174865723,
+      "pct_attaques_plus_proches_dun_autre": 1.0
+    },
+    {
+      "appareil": "SimpleHome_XCS7_1003_WHT_Security_Camera",
+      "dist_moy_normal_propre": 10.37016773223877,
+      "dist_moy_normal_autre_plus_proche": 10.237358093261719,
+      "pct_attaques_plus_proches_dun_autre": 1.0
+    }
+  ],
+  "pct_attaques_attirees_autre_appareil_moyen": 0.8777777777777778,
+  "appareil_attracteur": {
+    "Danmini_Doorbell": "Provision_PT_838_Security_Camera",
+    "Ecobee_Thermostat": "Provision_PT_838_Security_Camera",
+    "Ennio_Doorbell": "Provision_PT_838_Security_Camera",
+    "Philips_B120N10_Baby_Monitor": "Provision_PT_838_Security_Camera",
+    "Provision_PT_737E_Security_Camera": "Provision_PT_838_Security_Camera",
+    "Provision_PT_838_Security_Camera": "Philips_B120N10_Baby_Monitor",
+    "Samsung_SNH_1011_N_Webcam": "Ennio_Doorbell",
+    "SimpleHome_XCS7_1002_WHT_Security_Camera": "Provision_PT_838_Security_Camera",
+    "SimpleHome_XCS7_1003_WHT_Security_Camera": "Provision_PT_838_Security_Camera"
+  },
+  "hypothese_B": [
+    {
+      "appareil": "Danmini_Doorbell",
+      "part_hors_01_avec_scaler_dautrui": 0.0009595652173913043
+    },
+    {
+      "appareil": "Ecobee_Thermostat",
+      "part_hors_01_avec_scaler_dautrui": 0.040696739130434784
+    },
+    {
+      "appareil": "Ennio_Doorbell",
+      "part_hors_01_avec_scaler_dautrui": 0.0035045652173913045
+    },
+    {
+      "appareil": "Philips_B120N10_Baby_Monitor",
+      "part_hors_01_avec_scaler_dautrui": 0.07840043478260869
+    },
+    {
+      "appareil": "Provision_PT_737E_Security_Camera",
+      "part_hors_01_avec_scaler_dautrui": 0.04791108695652174
+    },
+    {
+      "appareil": "Provision_PT_838_Security_Camera",
+      "part_hors_01_avec_scaler_dautrui": 0.06149826086956522
+    },
+    {
+      "appareil": "Samsung_SNH_1011_N_Webcam",
+      "part_hors_01_avec_scaler_dautrui": 0.029007826086956522
+    },
+    {
+      "appareil": "SimpleHome_XCS7_1002_WHT_Security_Camera",
+      "part_hors_01_avec_scaler_dautrui": 0.046242173913043486
+    },
+    {
+      "appareil": "SimpleHome_XCS7_1003_WHT_Security_Camera",
+      "part_hors_01_avec_scaler_dautrui": 0.010915434782608695
+    }
+  ]
+}

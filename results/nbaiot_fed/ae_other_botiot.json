@@ -1,0 +1,76 @@
+{
+  "dataset": "BoT-IoT",
+  "n_clients": 7,
+  "features": 50,
+  "appareils_degeneres": [],
+  "note_degeneres": "appareils sans aucun normal unique en val/test après dédup (capteurs discrets très répétitifs) : exclus du seuil et du FPR, mais leurs attaques comptent dans le rappel",
+  "fedavg": {
+    "seuil": 0.11127223819494247,
+    "auc": 0.5745036498269136,
+    "rappel": 0.026836249853982606,
+    "fpr": 0.004308023694130318,
+    "n_normal_test": 1857,
+    "n_attaque": 1001593,
+    "par_type": {
+      "UDP": 0.0,
+      "TCP": 0.07628148350026118,
+      "HTTP": 0.0,
+      "Service_Scan": 1.8670882136944697e-05,
+      "OS_Fingerprint": 5.086211281216622e-05,
+      "Keylogging": 0.0006807351940095302,
+      "Data_Exfiltration": 0.025423728813559324
+    }
+  },
+  "fedprox": {
+    "seuil": 0.126381978392601,
+    "auc": 0.4536948352099016,
+    "rappel": 4.992047668064773e-06,
+    "fpr": 0.003769520732364028,
+    "n_normal_test": 1857,
+    "n_attaque": 1001593,
+    "par_type": {
+      "UDP": 0.0,
+      "TCP": 0.0,
+      "HTTP": 0.0,
+      "Service_Scan": 6.2236273789815655e-06,
+      "OS_Fingerprint": 0.0,
+      "Keylogging": 0.0,
+      "Data_Exfiltration": 0.03389830508474576
+    }
+  },
+  "fedprox_ft": {
+    "seuil": 0.126381978392601,
+    "auc": 0.4536948352099016,
+    "rappel": 4.992047668064773e-06,
+    "fpr": 0.003769520732364028,
+    "n_normal_test": 1857,
+    "n_attaque": 1001593,
+    "par_type": {
+      "UDP": 0.0,
+      "TCP": 0.0,
+      "HTTP": 0.0,
+      "Service_Scan": 6.2236273789815655e-06,
+      "OS_Fingerprint": 0.0,
+      "Keylogging": 0.0,
+      "Data_Exfiltration": 0.03389830508474576
+    }
+  },
+  "central": {
+    "seuil": 0.12656493484973907,
+    "auc": 0.6747583880246565,
+    "rappel": 0.004671558207775014,
+    "fpr": 0.05815831987075929,
+    "n_normal_test": 1857,
+    "n_attaque": 1001593,
+    "par_type": {
+      "UDP": 0.01045996569989871,
+      "TCP": 0.0,
+      "HTTP": 0.0,
+      "Service_Scan": 0.0,
+      "OS_Fingerprint": 0.0,
+      "Keylogging": 0.0,
+      "Data_Exfiltration": 0.00847457627118644
+    }
+  },
+  "temps_min": 0.5
+}

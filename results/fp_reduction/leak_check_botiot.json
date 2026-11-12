@@ -1,0 +1,39 @@
+{
+  "dataset": "Processed_BoT_IoT_dataset",
+  "lignes": 1011136,
+  "test_origine": 202228,
+  "seuil": 0.09,
+  "test_vu_en_train_index": 0.7981881836343138,
+  "test_normaux_vus_en_train_index": 0.7941330539549503,
+  "test_contenu_identique_a_une_ligne_train": 0.8388106493660621,
+  "test_jamais_vu_ni_doublon": 0.16118935063393794,
+  "perf_test_complet": {
+    "n": 202228,
+    "normaux": 1909,
+    "auc": 0.9961902515095545,
+    "f1_macro": 0.9099085213718239,
+    "fpr": 0.19853326348873757,
+    "rappel": 0.9985722772178376
+  },
+  "perf_lignes_vues": {
+    "n": 161416,
+    "normaux": 1516,
+    "auc": 0.9962087390535971,
+    "f1_macro": 0.911186730549284,
+    "fpr": 0.19393139841688653,
+    "rappel": 0.9985741088180112
+  },
+  "perf_lignes_jamais_vues": {
+    "n": 40812,
+    "normaux": 393,
+    "auc": 0.996123179667537,
+    "f1_macro": 0.9049129117503945,
+    "fpr": 0.21628498727735368,
+    "rappel": 0.9985650312971622
+  },
+  "baseline_publie": {
+    "f1_macro": 0.9099085213718239,
+    "auc": 0.9961902541245561,
+    "fpr": 0.19853326348873757
+  }
+}

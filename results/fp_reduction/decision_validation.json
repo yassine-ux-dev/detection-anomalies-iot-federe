@@ -1,0 +1,12 @@
+{
+  "fige_le": "2026-10-10T21:00:29+01:00",
+  "fige_avant_tout_usage_du_test": true,
+  "recommandation": {"modele": "origine (final_model_botiot.pt)", "seuil_type": "fpr_5", "seuil": 0.16687420010566711},
+  "justification_validation": [
+    "AUC la plus haute (0.9950 vs 0.9915 class_weights_x5, 0.9852 sans_hour) et AP classe normale la plus haute (0.847 vs 0.753, 0.665)",
+    "Au seuil fpr_5 : FPR 4.9 %, rappel 97.73 %, balanced accuracy 0.964 (meilleure de toutes les variantes)",
+    "class_weights_x5 n'apporte rien : même rappel (97.73 %) qu'origine mais FPR 6.4 % au lieu de 4.9 % ; la pondération équivaut à un décalage de seuil",
+    "fpr_10 d'origine (t=0.117) est dominé par fpr_5 (t=0.167) : même rappel à 0.03 point près, FPR 7.8 % vs 4.9 %",
+    "sans_hour : rappel 95.1 % au même FPR -> hour_of_day aide réellement, mais c'est un artefact de capture (à signaler)"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "dataset": "botiot",
+  "checkpoint": "final_model_botiot.pt",
+  "examples": {
+    "attack": {
+      "label": "attack",
+      "true_class": 1,
+      "base_value": 0.9760676026344299,
+      "f_x": 0.9807941636024048,
+      "predicted_class": "attack",
+      "top_contributions": [
+        {
+          "feature": "mean",
+          "value": 8.960091508924961e-05,
+          "shap_value": 0.35785470876132996,
+          "direction": "attack"
+        },
+        {
+          "feature": "state_RST",
+          "value": 1.0,
+          "shap_value": 0.33019120485443637,
+          "direction": "attack"
+        },
+        {
+          "feature": "state_INT",
+          "value": 0.0,
+          "shap_value": -0.2592602001710384,
+          "direction": "normal"
+        },
+        {
+          "feature": "stddev",
+          "value": 0.0,
+          "shap_value": -0.25215711247843736,
+          "direction": "normal"
+        },
+        {
+          "feature": "min",
+          "value": 8.960091508924961e-05,
+          "shap_value": -0.21141414909575051,
+          "direction": "normal"
+        },
+        {
+          "feature": "max",
+          "value": 8.91072559170425e-05,
+          "shap_value": 0.068687926200184,
+          "direction": "attack"
+        },
+        {
+          "feature": "proto_tcp",
+          "value": 1.0,
+          "shap_value": -0.05883170274866188,
+          "direction": "normal"
+        },
+        {
+          "feature": "proto_udp",
+          "value": 0.0,
+          "shap_value": 0.039566006440131786,
+          "direction": "attack"
+        },
+        {
+          "feature": "hour_of_day",
+          "value": 0.3076923191547394,
+          "shap_value": -0.015148710129318383,
+          "direction": "normal"
+        },
+        {
+          "feature": "dur",
+          "value": 1.2669362092765368e-07,
+          "shap_value": 0.0051620591763040236,
+          "direction": "attack"
+        }
+      ]
+    },
+    "normal": {
+      "label": "normal",
+      "true_class": 0,
+      "base_value": 0.9760676026344299,
+      "f_x": 0.16168289632945276,
+      "predicted_class": "normal",
+      "top_contributions": [
+        {
+          "feature": "state_CON",
+          "value": 1.0,
+          "shap_value": -0.25454998069960766,
+          "direction": "normal"
+        },
+        {
+          "feature": "state_INT",
+          "value": 0.0,
+          "shap_value": -0.1878303141363358,
+          "direction": "normal"
+        },
+        {
+          "feature": "mean",
+          "value": 0.010454907082021236,
+          "shap_value": 0.13599477140881427,
+          "direction": "attack"
+        },
+        {
+          "feature": "proto_tcp",
+          "value": 0.0,
+          "shap_value": -0.13464336784619377,
+          "direction": "normal"
+        },
+        {
+          "feature": "state_RST",
+          "value": 0.0,
+          "shap_value": -0.07369923132250221,
+          "direction": "normal"
+        },
+        {
+          "feature": "stddev",
+          "value": 0.0,
+          "shap_value": -0.07340764565626992,
+          "direction": "normal"
+        },
+        {
+          "feature": "min",
+          "value": 0.010454907082021236,
+          "shap_value": -0.0646986876609566,
+          "direction": "normal"
+        },
+        {
+          "feature": "state_REQ",
+          "value": 0.0,
+          "shap_value": -0.059361390627200306,
+          "direction": "normal"
+        },
+        {
+          "feature": "max",
+          "value": 0.010397304780781269,
+          "shap_value": -0.04921910808318883,
+          "direction": "normal"
+        },
+        {
+          "feature": "proto_udp",
+          "value": 1.0,
+          "shap_value": -0.03340106497988927,
+          "direction": "normal"
+        }
+      ]
+    }
+  }
+}

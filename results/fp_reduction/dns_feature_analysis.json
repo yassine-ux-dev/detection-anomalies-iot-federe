@@ -1,0 +1,229 @@
+{
+  "n_dns_normal": 336,
+  "n_attaque_udp": 44591,
+  "raw_stats": {
+    "pkts": {
+      "dns_median": 2.0,
+      "udp_median": 7.0,
+      "dns_mean": 1.8988095238095237,
+      "udp_mean": 7.958108138413581,
+      "auc_sep": 0.9310405967571933
+    },
+    "spkts": {
+      "dns_median": 2.0,
+      "udp_median": 7.0,
+      "dns_mean": 1.8988095238095237,
+      "udp_mean": 7.958108138413581,
+      "auc_sep": 0.9310405967571933
+    },
+    "dpkts": {
+      "dns_median": 0.0,
+      "udp_median": 0.0,
+      "dns_mean": 0.0,
+      "udp_mean": 0.0,
+      "auc_sep": 0.5
+    },
+    "bytes": {
+      "dns_median": 176.0,
+      "udp_median": 420.0,
+      "dns_mean": 182.58035714285714,
+      "udp_mean": 477.4864883048149,
+      "auc_sep": 0.8688838287888545
+    },
+    "sbytes": {
+      "dns_median": 176.0,
+      "udp_median": 420.0,
+      "dns_mean": 182.58035714285714,
+      "udp_mean": 477.4864883048149,
+      "auc_sep": 0.8688838287888545
+    },
+    "dbytes": {
+      "dns_median": 0.0,
+      "udp_median": 0.0,
+      "dns_mean": 0.0,
+      "udp_mean": 0.0,
+      "auc_sep": 0.5
+    },
+    "dur": {
+      "dns_median": 5.04332,
+      "udp_median": 21.578415,
+      "dns_mean": 33.98380800892857,
+      "udp_mean": 23.57112913644009,
+      "auc_sep": 0.8795936025954415
+    },
+    "rate": {
+      "dns_median": 0.19810850000000002,
+      "udp_median": 0.25386,
+      "dns_mean": 33.31472207738096,
+      "udp_mean": 0.33797858408647485,
+      "auc_sep": 0.6885108074873105
+    },
+    "srate": {
+      "dns_median": 0.19810850000000002,
+      "udp_median": 0.25386,
+      "dns_mean": 33.31472207738096,
+      "udp_mean": 0.33797858408647485,
+      "auc_sep": 0.6885108074873105
+    },
+    "drate": {
+      "dns_median": 0.0,
+      "udp_median": 0.0,
+      "dns_mean": 0.0,
+      "udp_mean": 0.0,
+      "auc_sep": 0.5
+    },
+    "mean": {
+      "dns_median": 0.0,
+      "udp_median": 2.864505,
+      "dns_mean": 0.005532636904761905,
+      "udp_mean": 2.6383643600278086,
+      "auc_sep": 0.9455555573354006
+    },
+    "stddev": {
+      "dns_median": 0.0,
+      "udp_median": 1.34721,
+      "dns_mean": 3.571428571428572e-08,
+      "udp_mean": 1.0872631943217241,
+      "auc_sep": 0.9030448101848441
+    },
+    "min": {
+      "dns_median": 0.0,
+      "udp_median": 0.0,
+      "dns_mean": 0.005532601190476191,
+      "udp_mean": 1.2505155019622793,
+      "auc_sep": 0.682410921860166
+    },
+    "max": {
+      "dns_median": 0.0,
+      "udp_median": 4.307592,
+      "dns_mean": 0.005532669642857143,
+      "udp_mean": 3.806862259671235,
+      "auc_sep": 0.9458392869156812
+    },
+    "sum": {
+      "dns_median": 0.0,
+      "udp_median": 9.637123,
+      "dns_mean": 0.005533000000000001,
+      "udp_mean": 9.434841833867821,
+      "auc_sep": 0.9458395538924681
+    }
+  },
+  "derivees": {
+    "octets_par_paquet": {
+      "dns_median": 87.999956000022,
+      "udp_median": 59.99999142857265,
+      "dns_mean": 96.98059834812696,
+      "udp_mean": 59.999987940282395,
+      "auc_sep": 0.9913915337389245
+    },
+    "octets_par_paquet_aller": {
+      "dns_median": 87.999956000022,
+      "udp_median": 59.99999142857265,
+      "dns_mean": 96.98059834812696,
+      "udp_mean": 59.999987940282395,
+      "auc_sep": 0.9913915337389245
+    },
+    "duree_par_paquet": {
+      "dns_median": 2.52165873917063,
+      "udp_median": 2.9364697330482064,
+      "dns_mean": 12.08478102522571,
+      "udp_mean": 3.203786978950555,
+      "auc_sep": 0.6581780729829103
+    },
+    "octets_par_seconde": {
+      "dns_median": 34.89501063645374,
+      "udp_median": 20.432695768212245,
+      "dns_mean": 17383713.275252562,
+      "udp_mean": 1968583.4254397028,
+      "auc_sep": 0.7963249443887352
+    },
+    "a_reponse": {
+      "dns_median": 0.0,
+      "udp_median": 0.0,
+      "dns_mean": 0.0,
+      "udp_mean": 0.0,
+      "auc_sep": 0.5
+    },
+    "ratio_dbytes_sbytes": {
+      "dns_median": 0.0,
+      "udp_median": 0.0,
+      "dns_mean": 0.0,
+      "udp_mean": 0.0,
+      "auc_sep": 0.5
+    }
+  },
+  "octets_par_paquet_percentiles": {
+    "dns": {
+      "p10": 85.9999570000215,
+      "p25": 86.999913000087,
+      "p50": 87.999956000022,
+      "p75": 87.999956000022,
+      "p90": 87.99996700001375
+    },
+    "udp": {
+      "p10": 59.999970000015,
+      "p25": 59.999988000002396,
+      "p50": 59.99999142857265,
+      "p75": 59.999994000000605,
+      "p90": 59.99999571428602
+    }
+  },
+  "auc_combinee_3features_validation": 0.9669930591374941,
+  "features_combinees": [
+    "octets_par_paquet",
+    "duree_par_paquet",
+    "octets_par_seconde"
+  ],
+  "shap_sans_hour_diff_dns_vs_udp": [
+    {
+      "feature": "max",
+      "shap_dns": -0.36295877383267316,
+      "shap_udp": 0.039234464747614176
+    },
+    {
+      "feature": "mean",
+      "shap_dns": 0.09889499082594251,
+      "shap_udp": -0.18196464101820792
+    },
+    {
+      "feature": "stddev",
+      "shap_dns": -0.13463144745628886,
+      "shap_udp": 0.03664784465883688
+    },
+    {
+      "feature": "min",
+      "shap_dns": -0.08390540441433966,
+      "shap_udp": 0.06594494925743527
+    },
+    {
+      "feature": "proto_udp",
+      "shap_dns": -0.016818453201726737,
+      "shap_udp": 0.07535862558944302
+    },
+    {
+      "feature": "state_INT",
+      "shap_dns": 0.08075313748462284,
+      "shap_udp": 0.16628766082692945
+    },
+    {
+      "feature": "proto_tcp",
+      "shap_dns": -0.16477729053418422,
+      "shap_udp": -0.0841288280136282
+    },
+    {
+      "feature": "state_RST",
+      "shap_dns": -0.11321612446172813,
+      "shap_udp": -0.05499911703367629
+    },
+    {
+      "feature": "state_REQ",
+      "shap_dns": -0.06869286214321535,
+      "shap_udp": -0.037615583712912945
+    },
+    {
+      "feature": "flgs_e_s",
+      "shap_dns": -0.006172884455408645,
+      "shap_udp": -0.026022161016656654
+    }
+  ]
+}

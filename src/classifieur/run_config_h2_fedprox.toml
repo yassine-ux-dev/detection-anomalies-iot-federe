@@ -1,0 +1,29 @@
+# H2 verification experiment (FedProx arm) - N-BaIoT, genuine one-client-
+# per-device partitioning (partition-by-file, fixed this verification
+# session - see tests/test_00_pipeline_integrity.py).
+#
+# Reduced scope for this 16GB/12-core machine (documented, not hidden):
+#   - client-sample-frac = 0.15 : each client's local data stratified-
+#     sampled to 15% before its own train/test split (class proportions
+#     preserved). Reduces memory/compute to fit this machine; NOT the full
+#     N-BaIoT baseline_nbaiot.json numbers (those use 100% of the data).
+#   - num-server-rounds = 30 (vs. 100 for the original baseline run).
+#
+# Identical to run_config_h2_fedavg.toml except proximal-mu (0.1 here vs
+# 0.0 there) - this is the controlled variable for the FedProx-vs-FedAvg
+# comparison. Everything else (lr, batch-size, local-epochs, seed,
+# weight-decay, etc.) is inherited unchanged from pyproject.toml.
+#
+# Usage (depuis le dossier src/classifieur/) :
+#   flwr run . --run-config run_config_h2_fedprox.toml --federation-config \
+#     'num-supernodes=9 client-resources-num-cpus=12' --stream
+
+data-dir = "../../data/Processed_NBaIoT_dataset"
+file-pattern = "NBaIoT_*.csv"
+num-supernodes = 9
+partition-by-file = true
+client-sample-frac = 0.15
+num-server-rounds = 30
+proximal-mu = 0.1
+checkpoint-name = "h2_fedprox_nbaiot.pt"
+round-log-file = "results/fl_logs/h2_fedprox_nbaiot.jsonl"

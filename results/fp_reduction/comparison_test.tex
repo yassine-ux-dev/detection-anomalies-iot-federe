@@ -1,0 +1,27 @@
+% Généré par quickstart-pytorch/fp_reduction/build_table.py — nécessite \usepackage{booktabs,graphicx}
+\begin{table}[htbp]
+\centering
+\caption{BoT-IoT -- comparaison des variantes sur le jeu de test (utilisé une seule fois). Tous les seuils sont choisis sur la validation. FPR = taux de faux positifs sur 955 flux normaux (IC 95 \% de Wilson). Rappels par type en \% (effectifs : DDoS 39922, DoS 39952, Scan 20123, Vol 11, Keylog. 152). Le seuil 0.090 est celui du modèle d'origine, choisi à l'époque sur l'ancien test ; il est donné pour référence.}
+\label{tab:botiot-fp-variantes}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrrrrrrr}
+\toprule
+ & & & & & & & & \multicolumn{5}{c}{Rappel par type (\%)} \\
+\cmidrule(lr){9-13}
+Variante & Seuil & F1-macro & AUC & MCC & Bal.\ acc. & Rappel (\%) & FPR (\%) & DDoS & DoS & Scan & Vol & Keylog. \\
+\midrule
+Origine & Origine (0.090) & 0.916 & 0.9962 & 0.833 & 0.907 & 99.87 & 18.4 [16.1--21.0] & 99.99 & 99.99 & 99.38 & 90.91 & 98.03 \\
+Origine & F1-macro max (0.112) & 0.912 & 0.9962 & 0.825 & 0.907 & 99.85 & 18.4 [16.1--21.0] & 99.99 & 99.99 & 99.35 & 36.36 & 94.74 \\
+Origine & FPR $\leq$ 10 \% (0.117) & 0.711 & 0.9962 & 0.509 & 0.961 & 97.70 & 5.4 [4.2--7.1] & 99.99 & 94.60 & 99.35 & 36.36 & 94.74 \\
+Origine & FPR $\leq$ 5 \% (0.167) & 0.711 & 0.9962 & 0.511 & 0.966 & 97.67 & 4.5 [3.4--6.0] & 99.99 & 94.59 & 99.22 & 36.36 & 94.74 \\
+\midrule
+Sans hour\_of\_day & F1-macro max (0.092) & 0.878 & 0.9860 & 0.773 & 0.814 & 99.97 & 37.2 [34.2--40.3] & 99.99 & 99.99 & 99.89 & 100.00 & 98.68 \\
+Sans hour\_of\_day & FPR $\leq$ 10 \% (0.137) & 0.622 & 0.9860 & 0.375 & 0.952 & 95.09 & 4.6 [3.4--6.1] & 93.45 & 94.61 & 99.27 & 63.64 & 98.03 \\
+Sans hour\_of\_day & FPR $\leq$ 5 \% (0.204) & 0.621 & 0.9860 & 0.375 & 0.953 & 95.04 & 4.4 [3.3--5.9] & 93.44 & 94.59 & 99.16 & 45.45 & 95.39 \\
+\midrule
+Class weights $\times$5 & F1-macro max (0.026) & 0.874 & 0.9922 & 0.752 & 0.841 & 99.87 & 31.6 [28.8--34.6] & 99.99 & 99.99 & 99.43 & 36.36 & 95.39 \\
+Class weights $\times$5 & FPR $\leq$ 10 \% (0.036) & 0.710 & 0.9922 & 0.508 & 0.962 & 97.68 & 5.2 [4.0--6.8] & 99.99 & 94.59 & 99.25 & 36.36 & 95.39 \\
+Class weights $\times$5 & FPR $\leq$ 5 \% (0.075) & 0.621 & 0.9922 & 0.376 & 0.954 & 95.04 & 4.2 [3.1--5.7] & 93.44 & 94.59 & 99.17 & 36.36 & 94.74 \\
+\bottomrule
+\end{tabular}}
+\end{table}

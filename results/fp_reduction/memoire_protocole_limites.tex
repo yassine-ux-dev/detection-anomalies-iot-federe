@@ -1,0 +1,87 @@
+% Paragraphes « Protocole d'évaluation » et « Limites » (BoT-IoT), rédigés le 2026-10-10.
+% Sources des chiffres : quickstart-pytorch/results/fp_reduction/ (check_protocol.json,
+% leak_check_*.json, test_duplicates_botiot.json, */test_metrics.json, */shap_dns.json)
+% et quickstart-pytorch/lab_test/results/lab_detection_summary.txt.
+% Le tableau référencé est dans comparison_test.tex (\label{tab:botiot-fp-variantes}).
+
+\paragraph{Protocole d'évaluation.}
+Les 1\,011\,136 flux de BoT-IoT, dont seulement 9\,543 flux normaux (0,94~\%), sont répartis
+entre sept clients : après un mélange aléatoire, les données sont découpées en sept tranches,
+et chaque client sépare sa tranche en 80~\% pour l'entraînement et 20~\% pour son test local.
+Notre première évaluation reposait sur un jeu de test « centralisé » tiré indépendamment de ce
+découpage. Une vérification a posteriori a montré que 79,8~\% de ses lignes faisaient partie
+des données d'entraînement d'un client, et que le seuil de décision (0,09) avait été choisi en
+balayant ce même jeu. Le jeu de test de TON-IoT présente la même construction (80,0~\% de
+recouvrement). L'effet mesuré sur les scores reste faible : sur BoT-IoT, le F1-macro vaut
+0,911 sur les lignes déjà vues contre 0,905 sur les lignes jamais vues, et sur TON-IoT 0,649
+contre 0,646. Ce protocole est néanmoins méthodologiquement invalide, et nous l'avons
+remplacé. Le nouveau jeu d'évaluation est l'union des tests locaux des clients, soit
+202\,230 flux qu'aucun client n'a vus pendant l'entraînement. Nous l'avons partagé en deux
+moitiés stratifiées par sous-catégorie d'attaque : une \emph{validation} (101\,115 flux, dont
+954 normaux) et un \emph{test} (101\,115 flux, dont 955 normaux). La normalisation min-max est
+ajustée uniquement sur les données d'entraînement. Tous les choix (seuil de décision, variante
+de modèle, pondération des classes) sont faits sur la validation. Nous imposons de plus que le
+seuil tombe au milieu d'un écart d'au moins $10^{-3}$ entre deux scores consécutifs, pour ne
+pas couper au milieu d'un amas de flux quasi identiques. Le seuil retenu, 0,167, correspond à
+un taux de faux positifs inférieur à 5~\% sur la validation. Il a été figé, avec la variante
+choisie, avant l'unique évaluation sur le test (tableau~\ref{tab:botiot-fp-variantes}). Sur ce
+test, le modèle détecte 97,7~\% des attaques avec 4,5~\% de faux positifs (IC à 95~\% :
+3,4--6,0~\%), contre 18,4~\% au seuil d'origine. L'AUC vaut 0,996 et la \emph{balanced
+accuracy} 0,966. Le F1-macro (0,711) et le MCC (0,511) sont plus bas qu'au seuil d'origine, car
+avec 99~\% d'attaques, les 2,3~\% d'attaques manquées représentent plus de lignes que tous
+les flux normaux. Enfin, 20~\% des flux de test ont un contenu identique à un flux
+d'entraînement, ce qui reflète le caractère répétitif du trafic d'attaque. Sur les seuls flux
+uniques, les résultats sont équivalents (4,9~\% de faux positifs, 98,7~\% de rappel) : ils ne
+sont donc pas gonflés par ces doublons.
+
+\paragraph{Limites.}
+Trois limites nuancent ces résultats. Premièrement, la séparation des flux normaux de petite
+taille repose en partie sur un artefact du jeu de données. Au seuil d'origine, 71~\% des faux
+positifs de validation (140 sur 196) sont des flux de type DNS : UDP, état INT, au plus quatre
+paquets. Ils obtiennent un score d'environ 0,116, dans le même amas que les quelque 10\,300
+attaques DoS et DDoS UDP de profil identique. L'analyse SHAP montre que l'état \texttt{INT}
+pousse ces flux vers la classe « attaque », et que c'est la variable \texttt{hour\_of\_day}
+(contribution moyenne $-0{,}29$) qui les retient du côté normal. Or cette variable traduit l'heure
+de capture du jeu de données, et non une propriété du trafic. Un modèle réentraîné sans elle
+(même configuration fédérée, 100 rounds) classe, au seuil 0,09, 329 de ces 336 flux normaux comme attaques. À
+taux de faux positifs comparable (environ 4,4~\%), son rappel tombe à 95,0~\%, contre 97,7~\%.
+Une pondération renforcée de la classe normale (poids multiplié par cinq) n'améliore pas cette
+séparation : elle ne fait que décaler les scores. L'effet de l'heure se mesure directement sur le
+trafic du laboratoire : pour un même flux normal, en ne faisant varier que \texttt{hour\_of\_day},
+la probabilité d'attaque médiane passe d'environ 0,48 à minuit à 0,98 à 14~heures. Fixer cette
+variable à sa valeur médiane d'entraînement, plutôt que de laisser l'heure réelle de capture, est
+donc nécessaire pour que le seuil ne dépende pas de l'heure. Une analyse des variables disponibles
+montre toutefois qu'une grandeur purement comportementale et reproductible, le nombre moyen
+d'octets par paquet (\texttt{bytes}/\texttt{pkts}), sépare presque parfaitement ces deux groupes
+sur la validation (aire sous la courbe de 0,99 : les attaques UDP se concentrent autour de
+57~octets par paquet, les flux DNS normaux autour de 88). Un constat annexe mérite d'être relevé :
+dans BoT-IoT, \emph{aucun flux UDP n'a de réponse capturée} --- les octets et paquets en retour
+(\texttt{dbytes}, \texttt{dpkts}) sont nuls aussi bien pour les flux DNS normaux que pour les
+attaques. La présence d'une réponse, qui distinguerait une requête DNS légitime d'un flot d'envoi,
+n'est donc pas exploitable sur ce jeu. Par ailleurs, les ports ne figurent pas parmi les
+variables : le terme « DNS » désigne un profil de flux, sans vérification du port~53.
+Deuxièmement, certaines catégories sont trop rares pour être évaluées de façon fiable. Le vol de
+données ne compte que 118 flux dans tout le jeu de données, dont 11 dans le test. Son rappel au
+seuil retenu (4 sur 11, soit 36~\%, avec un IC à 95~\% de 15 à 65~\%) n'est pas interprétable,
+et le keylogging (152 flux de test) reste lui aussi peu représenté. Troisièmement, les
+performances mesurées sur BoT-IoT ne se transfèrent pas telles quelles à du trafic réel. Nous
+avons testé le modèle dans un laboratoire isolé (victime Debian, attaquant Kali ; balayage nmap,
+SYN flood avec hping3, force brute SSH), avec des variables extraites par tshark, sur 66\,588
+flux. Les flux sont étiquetés par l'adresse IP de l'attaquant, réservée aux attaques pendant la
+capture d'attaque. Un premier étiquetage par fenêtres de temps avait classé à tort le balayage
+nmap (1\,000 flux, commencé 0,6~s après la fin de sa fenêtre) comme trafic normal. Il reste
+seulement 49 flux normaux, capturés à part (SSH, HTTP et ICMP entre les deux machines), pour
+66\,539 flux d'attaque. L'AUC vaut 0,99, mais sur 49 flux normaux seulement, et les scores sont
+décalés : tous les flux normaux obtiennent une probabilité d'attaque comprise entre 0,977
+et 1. On observe donc 100~\% de faux positifs aux seuils appris sur BoT-IoT (0,167 et 0,09).
+Autrement dit, le modèle classe les flux normaux sous les attaques, mais aucun seuil appris
+sur BoT-IoT ne les laisse passer. Ce décalage de domaine a deux causes. D'une part, les
+variables les plus influentes du modèle ne sont pas reproduites à l'identique hors de l'outil
+Argus utilisé par les auteurs du jeu de données. C'est le cas en particulier de la moyenne, de
+l'écart-type, du minimum et du maximum, calculés sur des enregistrements agrégés selon des
+paramètres non publiés. D'autre part, avec 99~\% d'attaques dans les données d'entraînement,
+le modèle tend vers la classe majoritaire dès qu'il sort de sa distribution. Vu le faible
+nombre de flux normaux, issus d'un seul couple de machines, cette AUC reste fragile. Un
+déploiement réel exigerait au minimum de calibrer le seuil sur le trafic local, et de
+préférence de réentraîner le modèle avec le même extracteur de variables que celui utilisé en
+production.

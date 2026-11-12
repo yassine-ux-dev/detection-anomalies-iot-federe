@@ -1,0 +1,47 @@
+{
+  "dataset": "N-BaIoT",
+  "checkpoint": "final_model_nbaiot.pt",
+  "evaluated_at": "2026-08-03T10:41:14.542185+00:00",
+  "num_test_examples": 1412522,
+  "input_dim": 125,
+  "decision_threshold": 0.08,
+  "loss": 0.007187238376838659,
+  "f1_macro": 0.9976591371764577,
+  "auc": 0.999755254726061,
+  "accuracy": 0.9993217804749236,
+  "false_positive_rate": 0.005603223427409926,
+  "false_negative_rate": 0.00025742775117264103,
+  "confusion_matrix": {
+    "tn": 110563,
+    "fp": 623,
+    "fn": 335,
+    "tp": 1301001
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.996979206117333,
+      "recall": 0.9943967765725901,
+      "f1-score": 0.995686316889105,
+      "support": 111186.0
+    },
+    "1": {
+      "precision": 0.999521367153648,
+      "recall": 0.9997425722488273,
+      "f1-score": 0.9996319574638104,
+      "support": 1301336.0
+    },
+    "accuracy": 0.9993217804749236,
+    "macro avg": {
+      "precision": 0.9982502866354905,
+      "recall": 0.9970696744107087,
+      "f1-score": 0.9976591371764577,
+      "support": 1412522.0
+    },
+    "weighted avg": {
+      "precision": 0.999321262152109,
+      "recall": 0.9993217804749236,
+      "f1-score": 0.9993213782353528,
+      "support": 1412522.0
+    }
+  }
+}

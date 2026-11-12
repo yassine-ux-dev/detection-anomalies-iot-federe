@@ -1,0 +1,101 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quickstart-pytorch"
+version = "1.1.1"
+description = "Federated Learning with PyTorch and Flower (Quickstart Example)"
+license = {file = "LICENSE"}
+dependencies = [
+    "flwr[simulation]>=1.29.0,<1.30.0",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "torch>=2.9.0",
+    "pyarrow",
+    "shap",
+    "matplotlib",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.flwr.app]
+publisher = "flwrlabs"
+fab-format-version = 1
+flwr-version-target = "1.29.0"
+
+[tool.flwr.app.components]
+serverapp = "pytorchexample.server_app:app"
+clientapp = "pytorchexample.client_app:app"
+
+[tool.flwr.app.config]
+# FIX 4 — Hyperparameter adjustments in pyproject.toml
+# batch-size: 64→512 for faster convergence per round
+# local-epochs: 1→2 for more learning per round
+# early-stopping-patience: 15→10 to avoid wasting rounds when stuck
+num-server-rounds = 100
+fraction-evaluate = 1.0
+local-epochs = 2
+learning-rate = 0.001
+lr = 0.001
+batch-size = 512
+test-size = 0.2
+seed = 42
+data-dir = "../../data/Processed_IoT_dataset"
+file-pattern = "IoT_*.csv"
+num-supernodes = 7
+proximal-mu = 0.1
+checkpoint-name = "final_model.pt"
+partition-by-file = false
+# Opt-in, default-"" (no-op): comma-separated feature columns to drop from the
+# model input. Empty = every existing run keeps its full feature set unchanged.
+# Used for the hour_of_day ablation (run_config_botiot_nohour.toml).
+exclude-features = ""
+centralized-eval-sample-frac = 1.0
+# Opt-in key for client_sample_frac - 1.0 means every run uses 100% of its
+# local data (used for the reduced-scale H2 FedAvg/FedProx N-BaIoT
+# comparison in run_config_h2_*.toml; see task.py's load_partition_data).
+client-sample-frac = 1.0
+# Opt-in, default-off per-round JSONL logging (round, loss, metrics, bytes
+# exchanged, wall time); empty string = disabled.
+round-log-file = ""
+
+early-stopping-patience = 10
+early-stopping-warmup = 3
+early-stopping-enabled = false
+early-stopping-min-delta = 0.0005
+patience = 10
+warmup = 3
+weight-decay = 0.0001
+lr-warmup-rounds = 4
+lr-min-factor = 0.1
+use-weighted-sampler = false
+sampler-imbalance-threshold = 2.0
+use-class-weights = true
+log-validation-report = false
+
+
+#######################################################################
+# CONFIGURATION MIGRATION NOTICE:
+#
+# What was previously called "federation config" for SuperLink
+# connections in pyproject.toml has been renamed and moved.
+#
+# These settings are now **SuperLink connection configuration**
+# and are defined in the Flower configuration file.
+#
+# The entries below are commented out intentionally and are kept
+# only as a migration reference.
+#
+# Docs: https://flower.ai/docs/framework/ref-flower-configuration.html
+#######################################################################
+
+# [tool.flwr.federations]
+# default = "local-simulation"
+
+# [tool.flwr.federations.local-simulation]
+# options.num-supernodes = 7
+# options.backend.client-resources.num-cpus = 1
+# options.backend.client-resources.num-gpus = 0.0

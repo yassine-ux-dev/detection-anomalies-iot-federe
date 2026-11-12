@@ -1,0 +1,13 @@
+# Run-config overrides for the BoT-IoT dataset.
+# Usage:  flwr run . --run-config run_config_botiot.toml --stream
+#
+# BoT-IoT has no natural per-device split (unlike TON-IoT/N-BaIoT), so the
+# harmonized data is one consolidated, pre-shuffled file that gets sliced
+# into num-supernodes equal partitions. Kept at 7 to match TON-IoT's client
+# count, so cross-dataset comparisons aren't confounded by a different
+# number of federated participants.
+
+data-dir = "../../data/Processed_BoT_IoT_dataset"
+file-pattern = "BoT_IoT_processed.csv"
+num-supernodes = 7
+checkpoint-name = "final_model_botiot.pt"

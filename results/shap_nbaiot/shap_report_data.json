@@ -1,0 +1,144 @@
+{
+  "dataset": "nbaiot",
+  "checkpoint": "final_model_nbaiot.pt",
+  "examples": {
+    "attack": {
+      "label": "attack",
+      "true_class": 1,
+      "base_value": 0.9224060773849487,
+      "f_x": 1.0003294986344209,
+      "predicted_class": "attack",
+      "top_contributions": [
+        {
+          "feature": "HH_jit_L5_mean",
+          "value": 0.9815289974212646,
+          "shap_value": 0.036410374486480095,
+          "direction": "attack"
+        },
+        {
+          "feature": "HH_jit_L0.1_mean",
+          "value": 0.9815289974212646,
+          "shap_value": 0.028260969204007953,
+          "direction": "attack"
+        },
+        {
+          "feature": "MI_dir_L0.1_weight",
+          "value": 0.0,
+          "shap_value": -0.015977195261136,
+          "direction": "normal"
+        },
+        {
+          "feature": "MI_dir_L0.01_mean",
+          "value": 0.0,
+          "shap_value": 0.01596616014142333,
+          "direction": "attack"
+        },
+        {
+          "feature": "H_L0.1_weight",
+          "value": 0.0,
+          "shap_value": -0.012369159966245092,
+          "direction": "normal"
+        },
+        {
+          "feature": "HH_jit_L1_mean",
+          "value": 0.9815289974212646,
+          "shap_value": 0.012159981580180515,
+          "direction": "attack"
+        },
+        {
+          "feature": "HH_jit_L0.01_mean",
+          "value": 0.9815289974212646,
+          "shap_value": -0.010801492516225118,
+          "direction": "normal"
+        },
+        {
+          "feature": "H_L0.01_mean",
+          "value": 0.0,
+          "shap_value": 0.010466165027157937,
+          "direction": "attack"
+        },
+        {
+          "feature": "H_L0.1_mean",
+          "value": 0.0,
+          "shap_value": 0.007274279782919482,
+          "direction": "attack"
+        },
+        {
+          "feature": "H_L0.01_weight",
+          "value": 0.0,
+          "shap_value": -0.0072467482287068685,
+          "direction": "normal"
+        }
+      ]
+    },
+    "normal": {
+      "label": "normal",
+      "true_class": 0,
+      "base_value": 0.9224060773849487,
+      "f_x": -0.04382998851498754,
+      "predicted_class": "normal",
+      "top_contributions": [
+        {
+          "feature": "H_L0.1_weight",
+          "value": 0.00018425093730911613,
+          "shap_value": -0.24234501891071036,
+          "direction": "normal"
+        },
+        {
+          "feature": "MI_dir_L0.1_weight",
+          "value": 0.00018425093730911613,
+          "shap_value": -0.22288371485641986,
+          "direction": "normal"
+        },
+        {
+          "feature": "MI_dir_L0.01_weight",
+          "value": 0.0004460536001715809,
+          "shap_value": -0.16301957048168908,
+          "direction": "normal"
+        },
+        {
+          "feature": "HH_jit_L5_mean",
+          "value": 2.5434085060282996e-08,
+          "shap_value": -0.15487830916925155,
+          "direction": "normal"
+        },
+        {
+          "feature": "H_L0.01_weight",
+          "value": 0.0004460536001715809,
+          "shap_value": -0.14488122934951306,
+          "direction": "normal"
+        },
+        {
+          "feature": "HH_jit_L0.1_mean",
+          "value": 2.5433044115175107e-08,
+          "shap_value": -0.13465926991076896,
+          "direction": "normal"
+        },
+        {
+          "feature": "HH_jit_L0.1_weight",
+          "value": 9.022100130096078e-06,
+          "shap_value": 0.09807508880667866,
+          "direction": "attack"
+        },
+        {
+          "feature": "HH_L0.01_weight",
+          "value": 6.85741106281057e-05,
+          "shap_value": 0.091650975739608,
+          "direction": "attack"
+        },
+        {
+          "feature": "MI_dir_L1_weight",
+          "value": 0.00024236820172518492,
+          "shap_value": -0.08235459583575624,
+          "direction": "normal"
+        },
+        {
+          "feature": "HH_jit_L0.01_weight",
+          "value": 6.85741106281057e-05,
+          "shap_value": 0.07886163817721865,
+          "direction": "attack"
+        }
+      ]
+    }
+  }
+}

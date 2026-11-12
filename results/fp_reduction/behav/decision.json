@@ -1,0 +1,9 @@
+{
+  "recommande_sur_validation": "deploy",
+  "seuils": {
+    "origine": 0.16687420010566711,
+    "behav": 0.6005044281482697,
+    "deploy": 0.6989599466323853
+  },
+  "note": "choix sur la validation avant tout usage du test ; critère = balanced accuracy"
+}

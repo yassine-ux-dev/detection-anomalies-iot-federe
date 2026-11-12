@@ -1,0 +1,48 @@
+{
+  "_obsolete": "OBSOLETE (2026-10-10) : mesuré sur l'ancien test BoT-IoT (load_centralized_data), dont 79.8 % des lignes ont servi à l'entraînement des clients, avec un seuil choisi sur ce même test. Remplacé par results/fp_reduction/ (validation/test propres, seuil figé sur la validation). Conservé pour traçabilité ; voir results/OBSOLETE.md.",
+  "dataset": "BoT-IoT",
+  "checkpoint": "final_model_botiot.pt",
+  "evaluated_at": "2026-08-03T12:00:31.180493+00:00",
+  "num_test_examples": 202228,
+  "input_dim": 51,
+  "decision_threshold": 0.09,
+  "loss": 0.0582657509947078,
+  "f1_macro": 0.9099085213718239,
+  "auc": 0.9961902541245561,
+  "accuracy": 0.996711632414898,
+  "false_positive_rate": 0.19853326348873757,
+  "false_negative_rate": 0.0014277227821624509,
+  "confusion_matrix": {
+    "tn": 1530,
+    "fp": 379,
+    "fn": 286,
+    "tp": 200033
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.8425110132158591,
+      "recall": 0.8014667365112624,
+      "f1-score": 0.8214765100671141,
+      "support": 1909.0
+    },
+    "1": {
+      "precision": 0.9981088956749097,
+      "recall": 0.9985722772178376,
+      "f1-score": 0.9983405326765337,
+      "support": 200319.0
+    },
+    "accuracy": 0.996711632414898,
+    "macro avg": {
+      "precision": 0.9203099544453843,
+      "recall": 0.90001950686455,
+      "f1-score": 0.9099085213718239,
+      "support": 202228.0
+    },
+    "weighted avg": {
+      "precision": 0.9966400765320891,
+      "recall": 0.996711632414898,
+      "f1-score": 0.9966709645694397,
+      "support": 202228.0
+    }
+  }
+}

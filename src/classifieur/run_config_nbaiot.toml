@@ -1,0 +1,22 @@
+# Run-config overrides for the N-BaIoT dataset.
+# Usage:  flwr run . --run-config run_config_nbaiot.toml --stream
+#
+# 9 simulated clients, one per N-BaIoT device (matches the TON-IoT design of
+# one client per IoT device). Everything else (lr, batch-size, FedProx mu,
+# early stopping, ...) is inherited from pyproject.toml's [tool.flwr.app.config].
+
+data-dir = "../../data/Processed_NBaIoT_dataset"
+file-pattern = "NBaIoT_*.csv"
+num-supernodes = 9
+checkpoint-name = "final_model_nbaiot.pt"
+# One client per device file (see harmonize_nbaiot.py's per-device split) —
+# avoids each of the 9 concurrent client processes loading all 9 files
+# (~8GB) just to slice out its own ~10%, and gives genuine non-IID-by-device
+# partitions instead of a global shuffle that mixes all devices together.
+partition-by-file = true
+# The server's live per-round diagnostic still needs a centralized
+# (all-device) held-out set, which peaks near 7GB even with the float32
+# read optimization. 20% keeps that comfortably under headroom on a typical
+# machine. Does NOT affect the final citable metrics — those come from
+# evaluate_checkpoint.py run separately on the full test set post-training.
+centralized-eval-sample-frac = 0.2

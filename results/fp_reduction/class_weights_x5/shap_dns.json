@@ -1,0 +1,95 @@
+{
+  "modele": "class_weights_x5",
+  "normaux_validation": 954,
+  "normaux_type_dns": 336,
+  "attaques_type_dns": {
+    "OS_Fingerprint": 4,
+    "Service_Scan": 466,
+    "UDP": 10317
+  },
+  "score_median_normaux_dns": 0.028285428881645203,
+  "score_median_attaques_dns": 0.9884008169174194,
+  "faux_positifs": {
+    "origine_0.09": {
+      "seuil": 0.09,
+      "total": 43,
+      "type_dns": 0,
+      "autres": 43,
+      "attaques_dns_detectees": 0.6836933345693891
+    },
+    "f1_macro_max": {
+      "seuil": 0.026480828411877155,
+      "total": 308,
+      "type_dns": 254,
+      "autres": 54,
+      "attaques_dns_detectees": 0.9938815240567349
+    },
+    "fpr_10": {
+      "seuil": 0.03586016222834587,
+      "total": 61,
+      "type_dns": 7,
+      "autres": 54,
+      "attaques_dns_detectees": 0.8165384258830073
+    },
+    "fpr_5": {
+      "seuil": 0.07498394697904587,
+      "total": 45,
+      "type_dns": 0,
+      "autres": 45,
+      "attaques_dns_detectees": 0.6836933345693891
+    }
+  },
+  "shap_normaux_dns_top": [
+    {
+      "feature": "max",
+      "shap_moyen": -0.2907344096359201,
+      "shap_moyen_attaques_dns": -0.07663386710839129
+    },
+    {
+      "feature": "stddev",
+      "shap_moyen": -0.20300259339096657,
+      "shap_moyen_attaques_dns": -0.06137718637158848
+    },
+    {
+      "feature": "proto_tcp",
+      "shap_moyen": -0.1525495803007432,
+      "shap_moyen_attaques_dns": -0.06266116684480447
+    },
+    {
+      "feature": "min",
+      "shap_moyen": -0.1033099935072026,
+      "shap_moyen_attaques_dns": 0.17496889925262885
+    },
+    {
+      "feature": "state_RST",
+      "shap_moyen": -0.09922311339548615,
+      "shap_moyen_attaques_dns": -0.08169506029470033
+    },
+    {
+      "feature": "mean",
+      "shap_moyen": 0.08377177306235987,
+      "shap_moyen_attaques_dns": -0.25359489623429665
+    },
+    {
+      "feature": "state_REQ",
+      "shap_moyen": -0.05889088520557664,
+      "shap_moyen_attaques_dns": -0.055506816040217594
+    },
+    {
+      "feature": "proto_udp",
+      "shap_moyen": -0.0573079868138591,
+      "shap_moyen_attaques_dns": 0.03074511133523866
+    },
+    {
+      "feature": "state_INT",
+      "shap_moyen": 0.024778505405987864,
+      "shap_moyen_attaques_dns": 0.1507382080742872
+    },
+    {
+      "feature": "flgs_e",
+      "shap_moyen": -0.021887751979150584,
+      "shap_moyen_attaques_dns": -0.019323358943712305
+    }
+  ],
+  "shap_additivite_erreur_moyenne": 0.028032905271546945
+}

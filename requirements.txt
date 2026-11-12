@@ -1,0 +1,10 @@
+# Versions exactes de l'environnement ayant produit les résultats du mémoire.
+# Python 3.11 recommandé. Installation : pip install -r requirements.txt
+torch==2.12.0
+flwr[simulation]==1.30.0
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+shap==0.52.0
+matplotlib==3.11.0
+pyarrow==24.0.0

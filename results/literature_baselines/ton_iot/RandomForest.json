@@ -1,0 +1,48 @@
+{
+  "decision_threshold": 0.6399999999999999,
+  "f1_macro": 0.6894443055181104,
+  "auc": 0.8546897946149141,
+  "accuracy": 0.82825,
+  "false_positive_rate": 0.12575200046726243,
+  "false_negative_rate": 0.44529350468912815,
+  "confusion_matrix": {
+    "tn": 14968,
+    "fp": 2153,
+    "fn": 1282,
+    "tp": 1597
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.9211076923076923,
+      "recall": 0.8742479995327376,
+      "f1-score": 0.8970663150639777,
+      "support": 17121.0
+    },
+    "1": {
+      "precision": 0.42586666666666667,
+      "recall": 0.5547064953108718,
+      "f1-score": 0.4818222959722432,
+      "support": 2879.0
+    },
+    "accuracy": 0.82825,
+    "macro avg": {
+      "precision": 0.6734871794871795,
+      "recall": 0.7144772474218046,
+      "f1-score": 0.6894443055181104,
+      "support": 20000.0
+    },
+    "weighted avg": {
+      "precision": 0.8498177466666667,
+      "recall": 0.82825,
+      "f1-score": 0.8372919385157226,
+      "support": 20000.0
+    }
+  },
+  "dataset": "TON-IoT",
+  "model": "RandomForest",
+  "num_train_examples": 80000,
+  "num_test_examples": 20000,
+  "input_dim": 25,
+  "train_seconds": 3.7,
+  "evaluated_at": "2026-08-06T09:32:00.792894+00:00"
+}

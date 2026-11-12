@@ -1,0 +1,80 @@
+{
+  "dataset": "TON-IoT",
+  "n_clients": 7,
+  "features": 17,
+  "appareils_degeneres": [
+    0,
+    1,
+    4
+  ],
+  "note_degeneres": "appareils sans aucun normal unique en val/test après dédup (capteurs discrets très répétitifs) : exclus du seuil et du FPR, mais leurs attaques comptent dans le rappel",
+  "fedavg": {
+    "seuil": 0.128474161028862,
+    "auc": 0.476726947888787,
+    "rappel": 0.01044569988885914,
+    "fpr": 0.006394912650494802,
+    "n_normal_test": 279910,
+    "n_attaque": 519161,
+    "par_type": {
+      "backdoor": 0.014073520330223941,
+      "ddos": 0.0,
+      "injection": 0.00864484588326477,
+      "password": 0.010142002046623771,
+      "ransomware": 0.0,
+      "scanning": 0.010823055625471936,
+      "xss": 0.005631936392247805
+    }
+  },
+  "fedprox": {
+    "seuil": 0.12685129046440125,
+    "auc": 0.4911757368812795,
+    "rappel": 0.010360947759943447,
+    "fpr": 0.006362759458397342,
+    "n_normal_test": 279910,
+    "n_attaque": 519161,
+    "par_type": {
+      "backdoor": 0.013931322520882763,
+      "ddos": 0.0,
+      "injection": 0.00864484588326477,
+      "password": 0.010078921176948849,
+      "ransomware": 0.0,
+      "scanning": 0.010823055625471936,
+      "xss": 0.005631936392247805
+    }
+  },
+  "fedprox_ft": {
+    "seuil": 0.03048868104815483,
+    "auc": 0.623368271692741,
+    "rappel": 0.1596113729652266,
+    "fpr": 0.003626165553213533,
+    "n_normal_test": 279910,
+    "n_attaque": 519161,
+    "par_type": {
+      "backdoor": 0.1467440764455423,
+      "ddos": 0.1825270410431175,
+      "injection": 0.13780083070013316,
+      "password": 0.17532977276868947,
+      "ransomware": 0.17255146600124766,
+      "scanning": 0.18701233324943367,
+      "xss": 0.23720390922643697
+    }
+  },
+  "central": {
+    "seuil": 0.11764705926179886,
+    "auc": 0.4022551152079164,
+    "rappel": 0.014652487378674438,
+    "fpr": 0.0,
+    "n_normal_test": 279910,
+    "n_attaque": 519161,
+    "par_type": {
+      "backdoor": 0.014788572171482432,
+      "ddos": 0.01915098533116017,
+      "injection": 0.012718853713309088,
+      "password": 0.012707290746737317,
+      "ransomware": 0.0198378041172801,
+      "scanning": 0.014598540145985401,
+      "xss": 0.01722709955275799
+    }
+  },
+  "temps_min": 13.0
+}

@@ -1,0 +1,144 @@
+{
+  "dataset": "BoT-IoT",
+  "checkpoint": "final_model_botiot.pt",
+  "examples": {
+    "attack": {
+      "label": "attack",
+      "true_class": 1,
+      "base_value": 0.9760676026344299,
+      "f_x": 0.9182107643192998,
+      "predicted_class": "attack",
+      "top_contributions": [
+        {
+          "feature": "mean",
+          "value": 8.960091508924961e-05,
+          "shap_value": 0.23924394390817383,
+          "direction": "attack"
+        },
+        {
+          "feature": "stddev",
+          "value": 0.0,
+          "shap_value": -0.20997091431396528,
+          "direction": "normal"
+        },
+        {
+          "feature": "state_RST",
+          "value": 1.0,
+          "shap_value": 0.18794587041546038,
+          "direction": "attack"
+        },
+        {
+          "feature": "state_INT",
+          "value": 0.0,
+          "shap_value": -0.17905452336199232,
+          "direction": "normal"
+        },
+        {
+          "feature": "min",
+          "value": 8.960091508924961e-05,
+          "shap_value": -0.07443114464148716,
+          "direction": "normal"
+        },
+        {
+          "feature": "proto_tcp",
+          "value": 1.0,
+          "shap_value": -0.03382698214207722,
+          "direction": "normal"
+        },
+        {
+          "feature": "max",
+          "value": 8.91072559170425e-05,
+          "shap_value": 0.014392511401468607,
+          "direction": "attack"
+        },
+        {
+          "feature": "hour_of_day",
+          "value": 0.3076923191547394,
+          "shap_value": -0.0094611817320513,
+          "direction": "normal"
+        },
+        {
+          "feature": "state_CON",
+          "value": 0.0,
+          "shap_value": 0.004689454138278961,
+          "direction": "attack"
+        },
+        {
+          "feature": "dur",
+          "value": 1.2669360671679897e-07,
+          "shap_value": 0.0031974860583255434,
+          "direction": "attack"
+        }
+      ]
+    },
+    "normal": {
+      "label": "normal",
+      "true_class": 0,
+      "base_value": 0.9760676026344299,
+      "f_x": 0.17155925043541498,
+      "predicted_class": "normal",
+      "top_contributions": [
+        {
+          "feature": "state_INT",
+          "value": 0.0,
+          "shap_value": -0.38140494325348756,
+          "direction": "normal"
+        },
+        {
+          "feature": "mean",
+          "value": 0.010454907082021236,
+          "shap_value": 0.3352770956362633,
+          "direction": "attack"
+        },
+        {
+          "feature": "state_CON",
+          "value": 1.0,
+          "shap_value": -0.28899361090517117,
+          "direction": "normal"
+        },
+        {
+          "feature": "min",
+          "value": 0.010454907082021236,
+          "shap_value": -0.15713057777218645,
+          "direction": "normal"
+        },
+        {
+          "feature": "stddev",
+          "value": 0.0,
+          "shap_value": -0.12492066419863265,
+          "direction": "normal"
+        },
+        {
+          "feature": "max",
+          "value": 0.010397304780781269,
+          "shap_value": -0.0806512916311661,
+          "direction": "normal"
+        },
+        {
+          "feature": "proto_tcp",
+          "value": 0.0,
+          "shap_value": -0.05563467168585419,
+          "direction": "normal"
+        },
+        {
+          "feature": "state_RST",
+          "value": 0.0,
+          "shap_value": -0.0414776644393794,
+          "direction": "normal"
+        },
+        {
+          "feature": "hour_of_day",
+          "value": 0.5384615659713745,
+          "shap_value": 0.024760696547569988,
+          "direction": "attack"
+        },
+        {
+          "feature": "proto_udp",
+          "value": 1.0,
+          "shap_value": -0.015212069392855482,
+          "direction": "normal"
+        }
+      ]
+    }
+  }
+}

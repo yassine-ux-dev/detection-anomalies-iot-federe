@@ -1,0 +1,86 @@
+{
+  "behav": [
+    {
+      "feature": "mean",
+      "importance": 0.12060635073635984
+    },
+    {
+      "feature": "state_INT",
+      "importance": 0.10758629485237284
+    },
+    {
+      "feature": "max",
+      "importance": 0.0733927263504293
+    },
+    {
+      "feature": "min",
+      "importance": 0.06991238741133204
+    },
+    {
+      "feature": "state_RST",
+      "importance": 0.062286599536370106
+    },
+    {
+      "feature": "stddev",
+      "importance": 0.06101748815097291
+    },
+    {
+      "feature": "proto_tcp",
+      "importance": 0.04989289280399471
+    },
+    {
+      "feature": "state_REQ",
+      "importance": 0.032457344135538024
+    },
+    {
+      "feature": "proto_udp",
+      "importance": 0.01696823204647097
+    },
+    {
+      "feature": "flgs_e_s",
+      "importance": 0.012507288318000116
+    }
+  ],
+  "deploy": [
+    {
+      "feature": "state_REQ",
+      "importance": 0.08103302394049752
+    },
+    {
+      "feature": "proto_udp",
+      "importance": 0.07776854956089997
+    },
+    {
+      "feature": "state_RST",
+      "importance": 0.0748460550260698
+    },
+    {
+      "feature": "proto_tcp",
+      "importance": 0.0660727484087928
+    },
+    {
+      "feature": "state_INT",
+      "importance": 0.012240683947672516
+    },
+    {
+      "feature": "state_CON",
+      "importance": 0.006439024985366648
+    },
+    {
+      "feature": "dur",
+      "importance": 0.005119179703171942
+    },
+    {
+      "feature": "octets_par_paquet",
+      "importance": 0.003456560744785196
+    },
+    {
+      "feature": "state_FIN",
+      "importance": 0.0011452377859480932
+    },
+    {
+      "feature": "proto_icmp",
+      "importance": 0.00024665200951443696
+    }
+  ]
+}

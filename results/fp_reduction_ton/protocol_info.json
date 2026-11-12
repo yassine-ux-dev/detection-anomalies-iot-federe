@@ -1,0 +1,10 @@
+{
+  "dataset": "TON-IoT (IoT telemetry)",
+  "checkpoint": "final_model.pt",
+  "features": 25,
+  "train": 2884903,
+  "validation": 360615,
+  "test": 360616,
+  "normaux_validation": 308699,
+  "normaux_test": 308700
+}

@@ -1,0 +1,18 @@
+# H2 verification experiment (FedAvg arm) - identical to
+# run_config_h2_fedprox.toml except proximal-mu = 0.0 (FedAvg has no
+# proximal term; Flower's FedProx strategy with mu=0 reduces exactly to
+# FedAvg). See that file for the rationale behind every other setting.
+#
+# Usage (depuis le dossier src/classifieur/) :
+#   flwr run . --run-config run_config_h2_fedavg.toml --federation-config \
+#     'num-supernodes=9 client-resources-num-cpus=12' --stream
+
+data-dir = "../../data/Processed_NBaIoT_dataset"
+file-pattern = "NBaIoT_*.csv"
+num-supernodes = 9
+partition-by-file = true
+client-sample-frac = 0.15
+num-server-rounds = 30
+proximal-mu = 0.0
+checkpoint-name = "h2_fedavg_nbaiot.pt"
+round-log-file = "results/fl_logs/h2_fedavg_nbaiot.jsonl"

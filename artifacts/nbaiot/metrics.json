@@ -1,0 +1,43 @@
+{
+  "rerun": {
+    "fedprox_global_auc": 0.9777553297057786,
+    "fedprox_ft_global_auc": 0.9997544447268486,
+    "fedprox_ft_rappel_p99": 0.9998822395889091,
+    "fedprox_ft_fpr_p99": 0.004773116438356165,
+    "par_appareil_ft_auc": {
+      "Danmini_Doorbell": 0.9996654667697983,
+      "Ecobee_Thermostat": 0.9988632528858685,
+      "Ennio_Doorbell": 0.9991740216981694,
+      "Philips_B120N10_Baby_Monitor": 0.9999486561284503,
+      "Provision_PT_737E_Security_Camera": 0.9999207626848782,
+      "Provision_PT_838_Security_Camera": 0.9999677079123044,
+      "Samsung_SNH_1011_N_Webcam": 0.9999984502017076,
+      "SimpleHome_XCS7_1002_WHT_Security_Camera": 0.9995585818448363,
+      "SimpleHome_XCS7_1003_WHT_Security_Camera": 0.9999996485212852
+    }
+  },
+  "reference_chapitre4": {
+    "graine42": {
+      "fedprox": 0.9777553297057786,
+      "fedprox_ft": 0.9998123876862829,
+      "fedavg": 0.8313585569418517
+    },
+    "par_appareil_ft_42": {
+      "Danmini_Doorbell": 0.999671756666015,
+      "Ecobee_Thermostat": 0.9988632528858685,
+      "Ennio_Doorbell": 0.999998834764672,
+      "Philips_B120N10_Baby_Monitor": 0.9999496319817434,
+      "Provision_PT_737E_Security_Camera": 0.9999463063575036,
+      "Provision_PT_838_Security_Camera": 0.9999828682533015,
+      "Samsung_SNH_1011_N_Webcam": 0.9999986773273194,
+      "SimpleHome_XCS7_1002_WHT_Security_Camera": 0.9996132942401914,
+      "SimpleHome_XCS7_1003_WHT_Security_Camera": 0.9999996485212851
+    },
+    "moyenne5": {
+      "fedprox": 0.9781175388999813,
+      "fedprox_ft": 0.9997908990463863,
+      "fedavg": 0.8433018750971559
+    }
+  },
+  "temps_min": 10.7
+}

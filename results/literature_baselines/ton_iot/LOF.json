@@ -1,0 +1,48 @@
+{
+  "decision_threshold": 0.07,
+  "f1_macro": 0.48425212471647044,
+  "auc": 0.5994456046545603,
+  "accuracy": 0.8435,
+  "false_positive_rate": 0.019858653116056304,
+  "false_negative_rate": 0.9690864883640152,
+  "confusion_matrix": {
+    "tn": 16781,
+    "fp": 340,
+    "fn": 2790,
+    "tp": 89
+  },
+  "classification_report": {
+    "0": {
+      "precision": 0.8574421337693526,
+      "recall": 0.9801413468839437,
+      "f1-score": 0.9146953014281042,
+      "support": 17121.0
+    },
+    "1": {
+      "precision": 0.20745920745920746,
+      "recall": 0.030913511635984717,
+      "f1-score": 0.05380894800483676,
+      "support": 2879.0
+    },
+    "accuracy": 0.8435,
+    "macro avg": {
+      "precision": 0.5324506706142801,
+      "recall": 0.5055274292599642,
+      "f1-score": 0.48425212471647044,
+      "support": 20000.0
+    },
+    "weighted avg": {
+      "precision": 0.7638770915270072,
+      "recall": 0.8435,
+      "f1-score": 0.7907707108528249,
+      "support": 20000.0
+    }
+  },
+  "dataset": "TON-IoT",
+  "model": "LOF",
+  "num_train_examples": 80000,
+  "num_test_examples": 20000,
+  "input_dim": 25,
+  "train_seconds": 2.5,
+  "evaluated_at": "2026-08-06T09:31:57.118331+00:00"
+}
